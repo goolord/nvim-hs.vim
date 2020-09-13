@@ -12,7 +12,5 @@ endfunction
 
 
 function! nvimhs#cabal#exePath(workingDirectory, name)
-	let l:cabalPath = nvimhs#execute(a:workingDirectory,
-				\ ['which', 'cabal'])
-	return join(l:cabalPath, '') . '/bin/' . a:name
+	return a:name
 endfunction
